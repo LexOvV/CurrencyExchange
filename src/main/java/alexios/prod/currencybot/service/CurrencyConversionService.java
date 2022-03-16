@@ -1,6 +1,6 @@
 package alexios.prod.currencybot.service;
 
-import alexios.prod.currencybot.entities.Currency;
+import alexios.prod.currencybot.entity.Currency;
 import alexios.prod.currencybot.service.implementations.NbrbCurrencyConversionService;
 
 import java.io.IOException;

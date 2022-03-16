@@ -1,6 +1,6 @@
 package alexios.prod.currencybot;
 
-import alexios.prod.currencybot.entities.Currency;
+import alexios.prod.currencybot.entity.Currency;
 import alexios.prod.currencybot.service.CurrencyConversionService;
 import alexios.prod.currencybot.service.CurrencyModeService;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
@@ -22,6 +22,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 
+//TODO: Лист объектов валют. Один раз парсим в поле класса и потом достаем по мере вызовов какие нужны
 public class Bot extends TelegramLongPollingBot {
     private final CurrencyModeService currencyModeService = CurrencyModeService.getInstance();
     private final CurrencyConversionService currencyConversionService = CurrencyConversionService.getInstance();

@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-import alexios.prod.currencybot.entities.Currency;
+import alexios.prod.currencybot.entity.Currency;
 import alexios.prod.currencybot.service.CurrencyConversionService;
 import org.json.JSONObject;
 
@@ -23,7 +23,7 @@ public class NbrbCurrencyConversionService implements CurrencyConversionService 
         if (currency == Currency.BYN) {
             return 1;
         }
-        URL url = new URL("https://www.nbrb.by/api/exrates/rates/" + currency.getId());
+        URL url = new URL("https://www.nbrb.by/api/exrates/rates/" + currency); //WAS currency.getId()
         HttpURLConnection con = (HttpURLConnection) url.openConnection();
         con.setRequestMethod("GET");
         BufferedReader in = new BufferedReader(new InputStreamReader(con.getInputStream()));
